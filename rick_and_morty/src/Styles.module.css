@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+@import url('https://fonts.googleapis.com/css?family=Spinnaker');
+
+
+
+/* --------------------------------------------- ESTILOS PARA APP.JS --------------------------------------------- */
+
+.divApp{
+    text-align: center;
+    padding: 30px 10px;
+    /* background-color: aquamarine; */
+    background-image:url("./components/resources/Fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* Corrige el problema del Card de Rick Sanchez */
+.divAppCard {                       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+
+
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/CARD.JSX --------------------------------------------- */
+
+.divCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    background-color: rgba(70, 131, 180, 0.5);
+    backdrop-filter: blur(5px);
+    padding-top: 2px;
+    margin: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #4f9;  
+}
+.divCard:hover {
+    box-shadow: 0 0 30px #4f9;
+    text-shadow: 0 0 2px #840079;
+    transition: 0.3s;
+}
+.divCard img {
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover; */
+    padding: 10px 10px;
+    border-radius: 25px;
+}
+.divCard button {  
+    align-self:flex-end;
+    border-radius: 20px;
+    border-color: rgba(106, 0, 0, 0.5);
+    background-color: transparent;
+    color: transparent;
+    margin: 5px;
+    font-family:'Spinnaker', sans-serif;
+    font-weight:bold;
+}
+.divCard button:hover {
+    color: rgb(106, 0, 0);
+    text-shadow: 0 0 30px #ff1d1d;
+    /* background-color: rgba(171, 0, 0, 0.805); */
+    box-shadow: 0px 0px 10px #ff1d1d;
+    transition: 0.3s;
+}
+
+.h2Title {
+    font-family: 'Gochi Hand', sans-serif;
+    font-size: 30px;
+    color: #3f0053;
+    margin: 5px;
+}
+
+.h2Otro {
+    display: inline;
+    left: -80%;
+    width: 50%;
+    font-family:'Spinnaker', sans-serif;
+    font-size: 18px;
+}
+
+
+
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/CARDS.JSX --------------------------------------------- */
+
+.divCards {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+
+
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/SEARCHBAR.JSX --------------------------------------------- */
+
+.divSearch { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.divSearch input {
+    border-radius: 10px;
+    width: 40%;
+    min-width: 10rem;
+    height: 100%;
+    box-shadow: 0px 0px 20px #270033;
+    border: black;
+    
+    
+}
+.divSearch button {
+    border-radius: 10px;
+    width: 20%;
+    min-width: fit-content;
+    height: 100%;
+    font-family:'Spinnaker', sans-serif;
+    color: beige;
+    background-color:#4a0060;
+    
+}
+.divSearch button:hover {
+    color: black;
+    background-color: darkslategray;
+    box-shadow: 0 0 5px #4f9;
+    transition: 0.5s;
+}
+    
