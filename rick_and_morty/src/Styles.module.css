@@ -7,21 +7,38 @@
 
 .divApp{
     text-align: center;
-    padding: 30px 10px;
+    padding: 10px;
     /* background-color: aquamarine; */
     background-image:url("./components/resources/Fondo.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
+    min-height: 100vh;
 
 }
 
-/* Corrige el problema del Card de Rick Sanchez */
-.divAppCard {                       
-    display: flex;
+/* Estilos genericos para divs */
+
+.divGeneric {                       
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;    
+    justify-content: center; */ 
+    min-height: 100vh;  
+}
+
+
+
+
+
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/NAV.JSX --------------------------------------------- */
+
+.Nav {
+    /* background-color: aqua;
+    border: solid 3px;
+    border-color: red; */
+    height: 10vh;
+    
 }
 
 
@@ -48,8 +65,10 @@
     justify-content: space-evenly;
     width: 20rem;
     height: 27rem;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
     
-    background-color: rgba(70, 131, 180, 0.5);
+    background-color: rgba(70, 131, 180, 0.3);
     backdrop-filter: blur(5px);
     /* padding-top: 2px; */
     margin: 20px 10px;
@@ -58,27 +77,29 @@
     
 }
 .divCard:hover {
+    cursor: pointer;
     box-shadow: 0 0 30px #4f9;
     transition: 0.3s;
 }
 .divCard:hover .h2Title {
     /* font-size: 35px; */
-    text-shadow: 0 0 2px #840079;
+    text-shadow: 0 0 2px #ff9595;
     transition: 0.3s;
 }
 .divCard img {
     padding: 10px 10px;
     border-radius: 25px;
+    object-fit: cover;
+    
     /* border-radius: 15px; */
     
     /* border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; */
     /* width: 100%;
     height: 100%; */
-    /* object-fit: cover; */
 }
 .divCard button {  
-    /* align-self: flex-end; */
+    
     border-radius: 20px;
     border-color: rgba(106, 0, 0, 0.5);
     background-color: transparent;
@@ -100,8 +121,11 @@
     width: 100%;
     font-family: 'Gochi Hand', sans-serif;
     font-size: 28px;
-    color: #3f0053;
-    margin: 5px;
+    color: #530037;
+    margin: 5px 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .h2Otro {
@@ -110,7 +134,10 @@
     width: 50%; */
     font-family:'Spinnaker', sans-serif;
     font-size: 15px;
-    margin: 5px;
+    margin: 5px 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
@@ -119,10 +146,11 @@
 
 .divCards {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    
     
 }
 
@@ -137,14 +165,15 @@
     justify-content: space-around;
     max-width: 50%;
     margin: 0 auto;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    padding: 20px;
 }
 .divSearch input {
     border-radius: 10px;
     width: 40%;
     min-width: 10rem;
     height: 100%;
-    box-shadow: 0px 0px 20px #270033;
+    box-shadow: 0px 0px 10px #ff2ae6b4;
     border: black;
     
     
@@ -166,3 +195,10 @@
     transition: 0.5s;
 }
     
+
+
+
+.credits {
+    font-weight: bold;
+    text-shadow: 0 0 2px #4f9;
+}
