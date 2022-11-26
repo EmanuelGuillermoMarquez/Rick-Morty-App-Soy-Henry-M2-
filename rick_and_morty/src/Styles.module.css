@@ -24,9 +24,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; */ 
-    min-height: 100vh;  
+    min-height: 75vh;  
 }
 
+
+.credits {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+
+
+    font-weight: bold;
+    text-shadow: 0 0 2px #4f9;
+}
+.credits h4 {
+    margin: 0;
+}
+
+/* .credits button {
+    border-radius: 10px;
+    width: 15%;
+    height: 100%;
+    font-family:'Spinnaker', sans-serif;
+    color: beige;
+    background-color:#4a0060;
+    
+}
+.credits button:hover {
+    color: black;
+    background-color: darkslategray;
+    box-shadow: 0 0 5px #4f9;
+    transition: 0.5s;
+} */
+    
 
 
 
@@ -34,12 +65,76 @@
 /* --------------------------------------------- ESTILOS PARA COMPONENTS/NAV.JSX --------------------------------------------- */
 
 .Nav {
+    
     /* background-color: aqua;
     border: solid 3px;
     border-color: red; */
     height: 10vh;
+}
+
+.navButton {
+    border-radius: 10px;
+    width: 15%;
+    min-width: fit-content;
+    height: 100%;
+    font-family:'Spinnaker', sans-serif;
+    color: beige;
+    background-color:#4a0060;
+}
+
+.navButton:hover {
+    color: black;
+    background-color: darkslategray;
+    box-shadow: 0 0 5px #4f9;
+    transition: 0.5s;
+}
+
+
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/SEARCHBAR.JSX --------------------------------------------- */
+
+.divSearch { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* max-width: 50%; */
+    /* margin: 0 auto; */
+    /* margin-top: 20px; */
+    padding: 20px;
+}
+.divSearch input {
+    border-radius: 10px;
+    width: 30%;
+    min-width: 10rem;
+    height: 100%;
+    box-shadow: 0px 0px 10px #ff2ae6b4;
+    border: black;
+    
     
 }
+/* .searchButton {
+    border-radius: 10px;
+    width: 15%;
+    min-width: fit-content;
+    height: 100%;
+    font-family:'Spinnaker', sans-serif;
+    color: beige;
+    background-color:#4a0060;
+    
+}
+.searchButton:hover {
+    color: black;
+    background-color: darkslategray;
+    box-shadow: 0 0 5px #4f9;
+    transition: 0.5s;
+} */
+    
+
+
+
+
+
 
 
 
@@ -103,7 +198,7 @@
     border-radius: 20px;
     border-color: rgba(106, 0, 0, 0.5);
     background-color: transparent;
-    color: transparent;
+    color: rgba(75, 0, 0, 0.5);
     margin: 5px;
     margin-left: 85%;
     font-family:'Spinnaker', sans-serif;
@@ -122,7 +217,7 @@
     font-family: 'Gochi Hand', sans-serif;
     font-size: 28px;
     color: #530037;
-    margin: 5px 12px;
+    margin: 5px 20px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -156,31 +251,77 @@
 
 
 
-/* --------------------------------------------- ESTILOS PARA COMPONENTS/SEARCHBAR.JSX --------------------------------------------- */
 
-.divSearch { 
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/ABOUT.JSX --------------------------------------------- */
+
+.about {
+    display: flex;
+    /* flex-direction: column; */
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* text-shadow: 0px 0px 10px #ff2ae6b4; */
+    margin: 20px;
+    color: aliceblue;
+}
+
+.divDescription {
+    width: 50%;
+}
+
+.about img {
+    width: 300px;
+    /* padding: 10px 10px; */
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.redes {
     display: flex;
     flex-direction: row;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    max-width: 50%;
-    margin: 0 auto;
-    /* margin-top: 20px; */
-    padding: 20px;
+    /* text-shadow: 0px 0px 10px #ff2ae6b4; */
+    color: aliceblue;
 }
-.divSearch input {
-    border-radius: 10px;
-    width: 40%;
-    min-width: 10rem;
-    height: 100%;
-    box-shadow: 0px 0px 10px #ff2ae6b4;
-    border: black;
-    
-    
+
+.redes a {
+    margin: 10px;
+    font-size: 15px;
+    color: beige;
 }
-.divSearch button {
+.redes a:hover {
+    text-shadow: 1px 2px 5px #4f9;
+    transition: 0.5s;
+}
+
+.logo {
+    width: 25px;
+}
+
+
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/DETAIL.JSX --------------------------------------------- */
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-shadow: 0px 0px 10px #ff2ae6b4;
+    margin: 20px;
+}
+.detail img {
+    padding: 10px 10px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+
+.detailBackButton {
+    margin-top: 20px;
     border-radius: 10px;
-    width: 20%;
+    width: 15%;
     min-width: fit-content;
     height: 100%;
     font-family:'Spinnaker', sans-serif;
@@ -188,17 +329,37 @@
     background-color:#4a0060;
     
 }
-.divSearch button:hover {
+.detailBackButton:hover {
     color: black;
     background-color: darkslategray;
     box-shadow: 0 0 5px #4f9;
     transition: 0.5s;
 }
-    
 
 
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/E404.JSX --------------------------------------------- */
 
-.credits {
-    font-weight: bold;
-    text-shadow: 0 0 2px #4f9;
+.error {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    color: aliceblue;
+    background-color: rgba(58, 58, 58, 0.3);
+    backdrop-filter: blur(5px);
 }
+
+.error img {
+    width: 300px;
+    /* padding: 10px 10px; */
+    border-radius: 25px;
+    
+}
+
+
+
+
+

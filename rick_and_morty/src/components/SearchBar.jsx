@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../Styles.module.css';
+import { NavLink } from 'react-router-dom';
 
 export default function SearchBar(props) {
 
@@ -11,11 +12,15 @@ export default function SearchBar(props) {
 
       <div className={styles.divSearch}>
 
-      <button onClick={props.onSearchRandom}>Random!</button>
+         <NavLink className={styles.active} to="/"><button className={styles.navButton}>Home</button></NavLink>
+
+         <NavLink to="/about"><button className={styles.navButton}>About!</button></NavLink>
 
          <input id='searchInput' type='search' placeholder='  Ingrese un numero de ID' onChange={handleInputChange}/>
         
-         <button onClick={() => props.onSearch(characterID)}>Agregar</button>
+         <button className={styles.navButton} onClick={() => props.onSearch(characterID)}>Agregar</button>
+
+         <button className={styles.navButton} onClick={props.onSearchRandom}>Random!</button> 
 
       </div>
    );
