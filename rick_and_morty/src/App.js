@@ -1,8 +1,10 @@
 import React from 'react';
-import { Routes , Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate, useLocation, Routes , Route } from 'react-router-dom';
 //import { NavLink } from 'react-router-dom';
 import './App.css';
 //import Card from './components/Card.jsx';
+import Form from './components/Form';
 import Detail from './components/Detail';
 import About from './components/About';
 import Cards from './components/Cards.jsx';
@@ -14,10 +16,38 @@ import styles from './Styles.module.css';
 
 
 function App () {
+
+  const location = useLocation();
+  //console.log(location);
+
+  const navigate = useNavigate();
+
+  const [userAccess, setUserAccess] = React.useState(false);
+  const userName = "marquezema127@gmail.com";
+  const password = "Emanuel98";
+
+  function logIn (userData) {
+    if (userData.email === userName && userData.password === password) {
+      setUserAccess(true);
+      navigate("/home");
+    }
+    else window.alert("Las credenciales ingresadas no son validas")
+  }
+
+  function logOut () {
+    window.alert("Esta cerrando su sesión")
+    setUserAccess(false);
+      navigate("/");
+  }
+
+  useEffect(() => {
+    !userAccess && navigate('/');
+  }, [userAccess]);
+
+  
   
   const [characters, setCharacters] = React.useState([]);
     
-
   const onSearch = (characterID) => {
     characters.some(item => item.id == characterID)
       ? window.alert('Ese personaje ya existe, ingrese otro ID')
@@ -65,16 +95,23 @@ function App () {
   return (  
     <div className={styles.divApp}>
       <div>
-        <Nav 
+        {location.pathname !== '/' && <Nav 
           onSearch={onSearch}
           onSearchRandom={onSearchRandom}
-          />
+          logOut={logOut}
+          />}
       </div>
       <hr />
       <div className={styles.divGeneric}>
       <Routes>
 
         <Route path='/' element= {
+          <Form 
+            logIn={logIn} 
+          />
+        } />
+
+        <Route path='/home' element= {
           <Cards
             characters={characters} 
             onClose={onClose}

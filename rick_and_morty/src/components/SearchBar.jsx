@@ -12,7 +12,7 @@ export default function SearchBar(props) {
 
       <div className={styles.divSearch}>
 
-         <NavLink className={styles.active} to="/"><button className={styles.navButton}>Home</button></NavLink>
+         <NavLink className={styles.active} to="/home"><button className={styles.navButton}>Home</button></NavLink>
 
          <NavLink to="/about"><button className={styles.navButton}>About!</button></NavLink>
 

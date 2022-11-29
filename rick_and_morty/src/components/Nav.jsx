@@ -10,6 +10,7 @@ export default function Nav(props) {
         <nav className={styles.Nav}>
             <div>
                 
+                <button className={styles.navButton} onClick={props.logOut}>Log Out</button> 
                 
                 <SearchBar 
                     onSearch={props.onSearch}

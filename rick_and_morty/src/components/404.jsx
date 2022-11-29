@@ -7,7 +7,7 @@ export default function Error404(props) {
     const navigate = useNavigate();
     
     const handleClickBack = () => navigate(-1);
-    const handleClickHome = () => navigate("/");
+    const handleClickHome = () => navigate("/home");
   
     return ( 
 

@@ -69,7 +69,7 @@
     /* background-color: aqua;
     border: solid 3px;
     border-color: red; */
-    height: 10vh;
+    min-height: 10vh;
 }
 
 .navButton {
@@ -360,6 +360,61 @@
 }
 
 
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/FORM.JSX --------------------------------------------- */
 
+.form {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    color: aliceblue;
+    background-color: rgba(58, 58, 58, 0.3);
+    backdrop-filter: blur(5px);
+    min-height: 50vh;
 
+    font-family:'Spinnaker', sans-serif;
+    font-size: 20px;
+}
 
+.formContainer {
+    width: 100vh;
+}
+
+.logInInput {
+    border-radius: 10px;
+    width: 40%;
+    min-width: 10rem;
+    height: 20px;
+    box-shadow: 0px 0px 10px #ff2ae6b4;
+    border: black;
+    margin: 10px;
+}
+
+.errorP {
+    color: #ff1d1d;
+}
+
+.errorInput {
+    border: #ff1d1d;
+}
+
+.logInButton {
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 25%;
+    min-width: fit-content;
+    height: 25px;
+    font-family:'Spinnaker', sans-serif;
+    color: beige;
+    background-color:#4a0060;
+    
+}
+.logInButton:hover {
+    color: black;
+    background-color: darkslategray;
+    box-shadow: 0 0 5px #4f9;
+    transition: 0.5s;
+}
