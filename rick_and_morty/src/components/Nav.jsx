@@ -9,7 +9,7 @@ export default function Nav(props) {
     return (
         <nav className={styles.Nav}>
             <div>
-                
+
                 <button className={styles.navButton} onClick={props.logOut}>Log Out</button> 
                 
                 <SearchBar 

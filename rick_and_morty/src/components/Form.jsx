@@ -64,7 +64,7 @@ export default function Form (props) {
 
                 <label> Contraseña: </label>
 
-                <input className={userError.email ? styles.errorInput : styles.logInInput} type="text" name='password' value={userData.password} placeholder='Ingrese su contraseña...' onChange={handleInputChange}/>
+                <input className={userError.email ? styles.errorInput : styles.logInInput} type="password" name='password' value={userData.password} placeholder='Ingrese su contraseña...' onChange={handleInputChange}/>
 
                 <p className={styles.errorP} >{userError.password}</p>
 

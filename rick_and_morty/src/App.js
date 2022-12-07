@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useNavigate, useLocation, Routes , Route } from 'react-router-dom';
-//import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './App.css';
 //import Card from './components/Card.jsx';
 import Form from './components/Form';
@@ -9,9 +9,10 @@ import Detail from './components/Detail';
 import About from './components/About';
 import Cards from './components/Cards.jsx';
 import Nav from './components/Nav';
+import Favorites from './components/Favorites'
 import Error404 from './components/404.jsx';
+import MyPortafolio from './components/Portafolio';
 //import SearchBar from './components/SearchBar.jsx';
-/* import characters, { Rick } from './data.js'; */
 import styles from './Styles.module.css';
 
 
@@ -123,13 +124,18 @@ function App () {
 
         <Route path='/about' element= {<About/>} />
 
+        <Route path='/favorites' element= {<Favorites/>} />
+
+        <Route path='/portafolio' element= {<MyPortafolio/>} />
+
         <Route path='*' element= {<Error404/>} />
 
       </Routes>
       </div>
       <hr />
       <footer className={styles.credits}>
-        <h4>Creado con mucho coffe por Emanuel</h4>
+        <h4>Creado con mucho coffe por Emanuel ❤️</h4>
+        <NavLink to="/portafolio"><button className={styles.navButton}>Portafolio</button></NavLink>
       </footer>
     </div>
   )

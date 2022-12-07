@@ -14,6 +14,8 @@ export default function SearchBar(props) {
 
          <NavLink className={styles.active} to="/home"><button className={styles.navButton}>Home</button></NavLink>
 
+         <NavLink to="/favorites"><button className={styles.navButton}>Favorites</button></NavLink>
+
          <NavLink to="/about"><button className={styles.navButton}>About!</button></NavLink>
 
          <input id='searchInput' type='search' placeholder='  Ingrese un numero de ID' onChange={handleInputChange}/>

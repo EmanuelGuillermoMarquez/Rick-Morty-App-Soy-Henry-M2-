@@ -157,7 +157,7 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 20rem;
     height: 27rem;
     /* overflow: hidden; */
@@ -196,13 +196,13 @@
 .divCard button {  
     
     border-radius: 20px;
-    border-color: rgba(106, 0, 0, 0.5);
-    background-color: transparent;
+    border-color: /* rgba(106, 0, 0, 0.5) */transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     color: rgba(75, 0, 0, 0.5);
-    margin: 5px;
-    margin-left: 85%;
+    margin: 8px;
+    /* margin-left: 10%;
     font-family:'Spinnaker', sans-serif;
-    font-weight:bold;
+    font-weight:bold; */
 }
 .divCard button:hover {
     color: rgb(106, 0, 0);
@@ -267,6 +267,7 @@
 
 .divDescription {
     width: 50%;
+    text-align: left;
 }
 
 .about img {

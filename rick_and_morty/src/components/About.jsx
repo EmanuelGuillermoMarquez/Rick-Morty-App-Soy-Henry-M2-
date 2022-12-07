@@ -18,7 +18,8 @@ export default function About(props) {
             </div>
             <div className={styles.divDescription}>     
                 <h2>Emanuel Guillermo Marquez</h2>
-                <h3>Bienvenidos a mi app de Rick & Morty desarrollada en el marco del curso FullStack Web Devoloper de Soy Henry. Espero sea de su agrado</h3>
+                <h3>Bienvenidos a mi app de Rick & Morty desarrollada en el marco del curso FullStack Web Devoloper de Soy Henry. Espero sea de su agrado...</h3>
+                <h4>Ademas de estar comenzando en el ambito del desarrollo web soy abogado, graduado a finales del año 2019 en la Universidad Nacional del Litoral, ejerciendo actualmente como asesor legal del Hospital Dr. Jose Maria Cullen y como abogado litigante. No dudes en contactarte por asesoramiento tech o legal.</h4>
             </div>
         </div>
         <h4 style={{color: "aliceblue"}} >Pueden seguirme en mis redes:</h4>
