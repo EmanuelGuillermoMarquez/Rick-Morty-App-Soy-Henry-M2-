@@ -338,6 +338,77 @@
 }
 
 
+
+/* --------------------------------------------- ESTILOS PARA COMPONENTS/FAVORITES.JSX --------------------------------------------- */
+
+.carruselContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: rgba(9, 143, 252, 0.545); */
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.carruselItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-width: 45vh;
+    width: 45vh;
+    height: 30rem;
+    background-color: rgba(45, 45, 45, 0.2);
+    backdrop-filter: blur(5px);
+    margin: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(81, 68, 255);
+
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+
+.carruselItem img {
+    padding: 10px 10px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.carruselItem h2 {
+    font-family:'Spinnaker', sans-serif;
+    font-size: 20px;
+    color: #4f9;
+    margin: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.favSelect {
+    border-radius: 10px;
+    width: 20vh;
+    height: 100%;
+    box-shadow: 0px 0px 10px #ff2ae6b4;
+    border: black;
+    margin: 10px;
+    background-color: rgba(45, 45, 45, 0.2);
+    backdrop-filter: blur(5px);
+    font-family:'Spinnaker', sans-serif;
+    color: beige;
+}
+
+.favSelect {
+    background-color: rgba(45, 45, 45, 0.2);
+    backdrop-filter: blur(5px);
+    
+  }
+
+
 /* --------------------------------------------- ESTILOS PARA COMPONENTS/E404.JSX --------------------------------------------- */
 
 .error {

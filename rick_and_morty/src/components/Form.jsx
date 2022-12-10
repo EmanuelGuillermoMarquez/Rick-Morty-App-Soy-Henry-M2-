@@ -10,7 +10,7 @@ export default function Form (props) {
 
     function validateUser (input) {
         const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-        const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,10})/
+        const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,10})/;
         const error = {};
 
         if (!input.email) error.email = "Debe ingresar su email";

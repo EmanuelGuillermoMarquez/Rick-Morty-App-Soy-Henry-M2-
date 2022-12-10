@@ -35,12 +35,11 @@ function Card(props /* , {addFavourite} , {delFavourite}  */) {
             setIsFav(true);
          }
       });
-   }, [myFavourites]);
+   }, [myFavourites, props.id]);
    
    return (
       <div className={styles.divCard} >
-         {
-            isFav 
+         {isFav 
                ? (<button onClick={handleFavourite}>❤️</button>) 
                : (<button onClick={handleFavourite}>🤍</button>)
          }
