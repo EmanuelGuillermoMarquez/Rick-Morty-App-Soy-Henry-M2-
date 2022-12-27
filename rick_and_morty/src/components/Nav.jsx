@@ -8,17 +8,21 @@ export default function Nav(props) {
     
     return (
         <nav className={styles.Nav}>
-            <div>
+            
+            <button className={styles.navButton} onClick={props.logOut}>Log Out</button> 
 
-                <button className={styles.navButton} onClick={props.logOut}>Log Out</button> 
-                
-                <SearchBar 
-                    onSearch={props.onSearch}
-                    onSearchRandom={props.onSearchRandom} 
-                />
-                
+            <NavLink className={styles.active} to="/home"><button className={styles.navButton}>Home</button></NavLink>
 
-            </div>
+            <NavLink to="/favorites"><button className={styles.navButton}>Favorites</button></NavLink>
+
+            <NavLink to="/about"><button className={styles.navButton}>About!</button></NavLink>
+
+            <SearchBar 
+                onSearch={props.onSearch}
+                onSearchRandom={props.onSearchRandom} 
+            />
+            
+            
         </nav>
     )
 }

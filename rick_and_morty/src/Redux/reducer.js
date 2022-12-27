@@ -10,8 +10,8 @@ export default function reducer(state = initialState, action) {
         case ADD_FAV:
             return {
                 ...state,
-                myFavourites: [...state.myFavourites, action.payload],
                 allCharacters: [...state.allCharacters, action.payload],
+                myFavourites: [...state.allCharacters, action.payload],
 
                 //El metodo push no devuelve un nuevo array, devuelve la propiedad length, no funciona para controlar la mutacion del store
             };
@@ -19,7 +19,7 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 myFavourites: state.myFavourites.filter((item) => item.id !== action.payload),
-                allCharacters: state.myFavourites,
+                allCharacters: state.allCharacters.filter((item) => item.id !== action.payload),
             };
         case FILTER:
                 return {

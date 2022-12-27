@@ -50,29 +50,33 @@ export default function Form (props) {
       }
     
   
-    return ( 
+    return (
 
-        <div className={styles.form}>
+        <>
+            <h1 className={styles.formTitle}>Rick and Morty App</h1>
+          
+                <div className={styles.form}>
 
-            <form className={styles.formContainer} onSubmit={handleSubmit}>
 
-                <label> Username/Correo Electrónico: </label>
+                    <form className={styles.formContainer} onSubmit={handleSubmit}>
 
-                <input className={userError.email ? styles.errorInput : styles.logInInput} type="text" name='email' value={userData.email} placeholder='Ingrese su correo electrónico...' onChange={handleInputChange}/>
+                        <label> Username/Correo Electrónico: </label>
 
-                <p className={styles.errorP} >{userError.email}</p>
+                        <input className={userError.email ? styles.errorInput : styles.logInInput} type="text" name='email' value={userData.email} placeholder='    Ingrese su correo electrónico...' onChange={handleInputChange}/>
 
-                <label> Contraseña: </label>
+                        <p className={styles.errorP} >{userError.email}</p>
 
-                <input className={userError.email ? styles.errorInput : styles.logInInput} type="password" name='password' value={userData.password} placeholder='Ingrese su contraseña...' onChange={handleInputChange}/>
+                        <label> Contraseña: </label>
 
-                <p className={styles.errorP} >{userError.password}</p>
+                        <input className={userError.email ? styles.errorInput : styles.logInInput} type="password" name='password' value={userData.password} placeholder='    Ingrese su contraseña...' onChange={handleInputChange}/>
 
-                <button className={styles.logInButton}>Log in</button>
-                
-            </form>
-        </div>
-    
+                        <p className={styles.errorP} >{userError.password}</p>
+
+                        <button className={styles.logInButton}>Log in</button>
+                        
+                    </form>
+                </div>
+          </>
    );
 
 }

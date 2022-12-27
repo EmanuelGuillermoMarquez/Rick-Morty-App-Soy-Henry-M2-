@@ -32,18 +32,18 @@ function Favorites( {myFavourites} ) {
  */
 
     return (
-        <>
+        <div>
             <select className={styles.favSelect} name='order' onChange={(e) => {
                     dispatch(orderCards(e.target.value));
                     setSortFav([myFavourites]);  // Aca seteamos el state local para que se renderice y actualice el orden
                 }}>
-                <option defaultValue={null}>Ordenar...</option>
+                <option defaultValue={null} disabled >Ordenar...</option>
                 <option value="Ascendente">Ascendente</option>
                 <option value="Descendente">Descendente</option>
             </select>
 
             <select className={styles.favSelect} name='filter' onChange={(e) => {dispatch(filterCards(e.target.value))}}>
-                <option defaultValue={null} disabled hidden> </option>
+                <option defaultValue={null} disabled >Filtrar...</option>                
                 <option value="all">All</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -66,7 +66,7 @@ function Favorites( {myFavourites} ) {
                 ))}
 
             </div>
-        </>
+        </div>
     )
 };
 

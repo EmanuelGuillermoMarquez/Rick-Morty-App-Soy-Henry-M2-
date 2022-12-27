@@ -14,7 +14,8 @@ export default function MyPortafolio(props) {
         <>
         <div className={styles.error}>
             <div className={styles.divDescription}>     
-                <h2>Esta pagina esta en construcción. Proximamente...</h2>
+                <h2>Esta pagina esta en construcción.</h2>
+                <h2>Proximamente...</h2>
             </div>
         </div>
         <button className={styles.detailBackButton} onClick={handleClickBack}>Volver</button>

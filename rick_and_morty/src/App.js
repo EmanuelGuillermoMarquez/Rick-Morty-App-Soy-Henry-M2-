@@ -24,8 +24,8 @@ function App () {
   const navigate = useNavigate();
 
   const [userAccess, setUserAccess] = React.useState(false);
-  const userName = "marquezema127@gmail.com";
-  const password = "Emanuel98";
+  const userName = "admin@admin.com";
+  const password = "Admin123";
 
   function logIn (userData) {
     if (userData.email === userName && userData.password === password) {
@@ -95,6 +95,7 @@ function App () {
 
   return (  
     <div className={styles.divApp}>
+
       <div>
         {location.pathname !== '/' && <Nav 
           onSearch={onSearch}
@@ -102,40 +103,48 @@ function App () {
           logOut={logOut}
           />}
       </div>
-      <hr />
+
+      {/*  {location.pathname !== '/' && <hr />} */}
+
       <div className={styles.divGeneric}>
-      <Routes>
+        <Routes>
 
-        <Route path='/' element= {
-          <Form 
-            logIn={logIn} 
-          />
-        } />
+          <Route path='/' element= {
+            <Form 
+              logIn={logIn} 
+            />
+          } />
 
-        <Route path='/home' element= {
-          <Cards
-            characters={characters} 
-            onClose={onClose}
-          />
-        }>
-        </Route>
+          <Route path='/home' element= {
+            <Cards
+              characters={characters} 
+              onClose={onClose}
+            />
+          }>
+          </Route>
 
-        <Route path='/detail/:detailId' element= {<Detail/>}></Route>
+          <Route path='/detail/:detailId' element= {<Detail/>}></Route>
 
-        <Route path='/about' element= {<About/>} />
+          <Route path='/about' element= {<About/>} />
 
-        <Route path='/favorites' element= {<Favorites/>} />
+          <Route path='/favorites' element= {<Favorites/>} />
 
-        <Route path='/portafolio' element= {<MyPortafolio/>} />
+          <Route path='/portafolio' element= {<MyPortafolio/>} />
 
-        <Route path='*' element= {<Error404/>} />
+          <Route path='*' element= {<Error404/>} />
 
-      </Routes>
+        </Routes>
       </div>
-      <hr />
+
+      {/* {location.pathname !== '/' && <hr />} */}
+
       <footer className={styles.credits}>
-        <h4>Creado con mucho coffe por Emanuel ❤️</h4>
-        <NavLink to="/portafolio"><button className={styles.navButton}>Portafolio</button></NavLink>
+        <h4>Creado con mucho coffe por Emanuel 🖤</h4>
+
+        {location.pathname !== '/' && 
+          <NavLink to="/portafolio"><button className={styles.navButton}>Portafolio</button></NavLink>
+        }
+        
       </footer>
     </div>
   )

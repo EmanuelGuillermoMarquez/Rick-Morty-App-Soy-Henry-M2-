@@ -1,42 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 @import url('https://fonts.googleapis.com/css?family=Spinnaker');
-
+@font-face {
+    font-family: 'Rick & Morty Font';
+    src: url('components/resources/Rick-and-Morty-Font/get_schwifty.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
 
 
 /* --------------------------------------------- ESTILOS PARA APP.JS --------------------------------------------- */
 
 .divApp{
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     /* background-color: aquamarine; */
     background-image:url("./components/resources/Fondo.jpg");
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size: cover;
     min-height: 100vh;
-
+    box-sizing: border-box;
 }
 
 /* Estilos genericos para divs */
 
 .divGeneric {                       
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; */ 
-    min-height: 75vh;  
+    /* justify-content: center;  */
+    min-height: 80vh;  
 }
 
 
 .credits {
+    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 15px;
-
+    /* background-color: rgba(45, 45, 45, 0.199);
+    backdrop-filter: blur(5px); */
 
     font-weight: bold;
-    text-shadow: 0 0 2px #4f9;
+    text-shadow: 0 1px 1px #4f9;
 }
 .credits h4 {
     margin: 0;
@@ -65,16 +72,20 @@
 /* --------------------------------------------- ESTILOS PARA COMPONENTS/NAV.JSX --------------------------------------------- */
 
 .Nav {
-    
-    /* background-color: aqua;
-    border: solid 3px;
-    border-color: red; */
-    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(45, 45, 45, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .navButton {
+    border-color: transparent;
     border-radius: 10px;
-    width: 15%;
+    width: 80px;
     min-width: fit-content;
     height: 100%;
     font-family:'Spinnaker', sans-serif;
@@ -86,7 +97,7 @@
     color: black;
     background-color: darkslategray;
     box-shadow: 0 0 5px #4f9;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
 }
 
 
@@ -102,11 +113,11 @@
     /* margin: 0 auto; */
     /* margin-top: 20px; */
     padding: 20px;
+    min-width: 50%;
 }
 .divSearch input {
     border-radius: 10px;
-    width: 30%;
-    min-width: 10rem;
+    min-width: 50%;
     height: 100%;
     box-shadow: 0px 0px 10px #ff2ae6b4;
     border: black;
@@ -245,6 +256,8 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
     
     
 }
@@ -306,11 +319,11 @@
 
 .detail {
     display: flex;
-    flex-direction: column;
     align-content: center;
     justify-content: center;
+    /* background-color: #4a0060; */
     text-shadow: 0px 0px 10px #ff2ae6b4;
-    margin: 20px;
+    margin: 30px;
 }
 .detail img {
     padding: 10px 10px;
@@ -386,7 +399,7 @@
     margin: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .favSelect {
@@ -396,17 +409,18 @@
     box-shadow: 0px 0px 10px #ff2ae6b4;
     border: black;
     margin: 10px;
+    margin-top: 30px;
     background-color: rgba(45, 45, 45, 0.2);
     backdrop-filter: blur(5px);
     font-family:'Spinnaker', sans-serif;
     color: beige;
 }
 
-.favSelect {
+.favSelect:focus {
     background-color: rgba(45, 45, 45, 0.2);
     backdrop-filter: blur(5px);
     
-  }
+}
 
 
 /* --------------------------------------------- ESTILOS PARA COMPONENTS/E404.JSX --------------------------------------------- */
@@ -439,13 +453,13 @@
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap; 
-    margin: 30px;
+    margin: 50px;
     padding: 30px;
     border-radius: 30px;
     color: aliceblue;
     background-color: rgba(58, 58, 58, 0.3);
     backdrop-filter: blur(5px);
-    min-height: 50vh;
+    
 
     font-family:'Spinnaker', sans-serif;
     font-size: 20px;
@@ -453,6 +467,8 @@
 
 .formContainer {
     width: 100vh;
+    margin: 20px;
+    
 }
 
 .logInInput {
@@ -470,6 +486,13 @@
 }
 
 .errorInput {
+    border-radius: 10px;
+    width: 40%;
+    min-width: 10rem;
+    height: 20px;
+    box-shadow: 0px 0px 10px #ff2ae6b4;
+    border: black;
+    margin: 10px;
     border: #ff1d1d;
 }
 
@@ -489,4 +512,11 @@
     background-color: darkslategray;
     box-shadow: 0 0 5px #4f9;
     transition: 0.5s;
+}
+
+.formTitle {
+    font-family: 'Rick & Morty Font';
+    font-size: 60px;
+    color: black;
+    text-shadow: 0 1px 1px #4f9;
 }
